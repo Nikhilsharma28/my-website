@@ -1,0 +1,776 @@
+/* =====================================================
+   RESPONSIVE DESIGN
+   Desktop  : Above 1024px
+   Tablet   : 601px - 1024px
+   Mobile   : Up to 600px
+===================================================== */
+
+
+/* =====================================================
+   HAMBURGER BUTTON
+===================================================== */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   TABLET
+   601px - 1024px
+===================================================== */
+
+@media (max-width: 1024px) {
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+        height: 70px;
+
+        padding: 15px 25px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: #111;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    .category-menu {
+        font-size: 17px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        height: 500px;
+
+        margin-top: 70px;
+    }
+
+    .hero-content {
+        left: 50px;
+        right: 50px;
+
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+
+    /* ================= FEATURES ================= */
+
+    .features {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        padding: 0 30px;
+    }
+
+    .feature {
+        width: 100%;
+        height: 220px;
+    }
+
+    .feature h3 {
+        font-size: 25px;
+    }
+
+
+    /* ================= CATEGORY ================= */
+
+    .category-container {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        padding: 0 30px;
+    }
+
+    .category-card {
+        width: 100%;
+        height: 220px;
+    }
+
+    .category-card i {
+        font-size: 55px;
+    }
+
+    .category-card h3 {
+        font-size: 30px;
+    }
+
+
+    /* ================= SEARCH ================= */
+
+    .search1category {
+        gap: 15px;
+
+        padding: 0 25px;
+    }
+
+    .search input {
+        width: 300px;
+    }
+
+
+    /* ================= PRODUCTS ================= */
+
+    #products {
+        padding: 0 25px;
+
+        gap: 20px;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    .card img {
+        height: 190px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .full-about {
+        padding: 0 30px;
+    }
+
+    .about-intro,
+    .about-img {
+        width: 50%;
+
+        height: 350px;
+    }
+
+    .about h3 {
+        font-size: 27px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .all-details {
+        padding: 0 30px;
+    }
+
+    .left-details {
+        width: 50%;
+    }
+
+    .right-form {
+        width: 50%;
+    }
+
+    .left-details h4 {
+        font-size: 27px;
+    }
+
+    .left-details p {
+        font-size: 19px;
+    }
+
+    .full-form label {
+        font-size: 18px;
+    }
+
+
+    /* ================= NEWSLETTER ================= */
+
+    .newsletter p {
+        font-size: 24px;
+    }
+
+    .newsletter-form input {
+        width: 40%;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+        height: auto;
+
+        padding: 20px 30px;
+    }
+
+    .all-detailsFooter {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
+    .mystore,
+    .quickLink,
+    .customer,
+    .contact {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .quickLink h3,
+    .quickLink a {
+        margin-left: 0;
+    }
+
+
+    /* ================= CART ================= */
+
+    #cart-section {
+        width: 400px;
+    }
+
+
+    /* ================= LOGIN ================= */
+
+    .login-box {
+        width: 380px;
+
+        max-width: 90%;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   Up to 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+        padding: 15px 18px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        font-size: 23px;
+    }
+
+    nav ul {
+        padding: 20px 15px;
+
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .category-menu {
+        font-size: 16px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        height: 430px;
+
+        margin-top: 70px;
+    }
+
+    .hero-content {
+        left: 25px;
+        right: 25px;
+
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+
+        line-height: 1.5;
+    }
+
+    .hero-content button {
+        padding: 10px 18px;
+
+        font-size: 14px;
+    }
+
+    .prev,
+    .next {
+        width: 35px;
+        height: 35px;
+
+        font-size: 22px;
+    }
+
+    .prev {
+        left: 8px;
+    }
+
+    .next {
+        right: 8px;
+    }
+
+
+    /* ================= FEATURES ================= */
+
+    .features {
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 0 20px;
+
+        gap: 15px;
+
+        margin-top: 30px;
+    }
+
+    .feature {
+        width: 100%;
+
+        height: 190px;
+    }
+
+    .feature i {
+        font-size: 40px;
+
+        margin-top: 30px;
+    }
+
+    .feature h3 {
+        font-size: 23px;
+    }
+
+    .feature p {
+        font-size: 16px;
+
+        padding: 0 15px;
+    }
+
+
+    /* ================= CATEGORY ================= */
+
+    .category h2 {
+        font-size: 27px;
+    }
+
+    .category-container {
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 0 20px;
+
+        gap: 15px;
+    }
+
+    .category-card {
+        width: 100%;
+
+        height: 190px;
+    }
+
+    .category-card i {
+        font-size: 45px;
+
+        margin-top: 30px;
+    }
+
+    .category-card h3 {
+        font-size: 25px;
+    }
+
+    .category-card p {
+        font-size: 16px;
+    }
+
+
+    /* ================= PRODUCTS ================= */
+
+    .products-container h2 {
+        font-size: 27px;
+    }
+
+    .search1category {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        padding: 0 20px;
+
+        gap: 12px;
+    }
+
+    .search {
+        display: flex;
+
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+
+        font-size: 15px;
+    }
+
+    .search .submit {
+        width: 90px;
+
+        font-size: 15px;
+    }
+
+    .category-search {
+        width: 100%;
+    }
+
+    .category-search select {
+        width: 100%;
+    }
+
+
+    /* ================= PRODUCT CARDS ================= */
+
+    #products {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        padding: 0 20px;
+
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+
+        max-width: 350px;
+
+        margin: auto;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about h2 {
+        font-size: 27px;
+    }
+
+    .full-about {
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 0 20px;
+    }
+
+    .about-intro,
+    .about-img {
+        width: 100%;
+
+        height: 300px;
+
+        border-radius: 10px;
+    }
+
+    .about-intro {
+        padding: 10px;
+    }
+
+    .about h3 {
+        font-size: 25px;
+    }
+
+    .about p {
+        font-size: 18px;
+    }
+
+    .about button {
+        width: 60%;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact-us h2 {
+        font-size: 27px;
+    }
+
+    .all-details {
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 0 20px;
+    }
+
+    .left-details,
+    .right-form {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 350px;
+
+        border-radius: 10px;
+
+        border: 1px solid #ddd;
+    }
+
+    .left-details {
+        padding-bottom: 25px;
+    }
+
+    .left-details h4 {
+        font-size: 25px;
+    }
+
+    .left-details p {
+        font-size: 18px;
+    }
+
+    .contact-us span {
+        font-size: 15px;
+
+        margin-left: 0;
+    }
+
+    .right-form {
+        padding-bottom: 25px;
+    }
+
+    .right-form h4 {
+        font-size: 22px;
+    }
+
+    .full-form {
+        width: 100%;
+    }
+
+    .full-form label {
+        font-size: 16px;
+    }
+
+    .full-form input,
+    .full-form textarea {
+        width: 90%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .full-form button {
+        width: 90%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ================= NEWSLETTER ================= */
+
+    .newsletter {
+        padding: 0 20px;
+    }
+
+    .newsletter h2 {
+        font-size: 27px;
+    }
+
+    .newsletter p {
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+
+        margin-top: 15px;
+
+        border-radius: 8px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+
+        margin-top: 0;
+
+        border-radius: 8px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+        height: auto;
+
+        padding: 25px 20px;
+    }
+
+    .all-detailsFooter {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .mystore,
+    .quickLink,
+    .customer,
+    .contact {
+        width: 100%;
+
+        margin: 0;
+
+        text-align: center;
+    }
+
+    .quickLink h3,
+    .quickLink a {
+        margin-left: 0;
+    }
+
+    .customer p {
+        line-height: 2;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+
+    /* ================= CART ================= */
+
+    #cart-section {
+        width: 100%;
+
+        right: -100%;
+
+        padding: 25px 18px;
+    }
+
+    #cart-section.open {
+        right: 0;
+    }
+
+    .cart-item {
+        gap: 8px;
+
+        padding: 10px;
+
+        flex-wrap: wrap;
+    }
+
+    .cart-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cart-item h3 {
+        font-size: 13px;
+    }
+
+
+    /* ================= LOGIN ================= */
+
+    .login-box {
+        width: calc(100% - 40px);
+
+        padding: 25px 20px;
+    }
+
+    .login-box h2 {
+        font-size: 25px;
+    }
+
+}

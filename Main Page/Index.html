@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!-- NAVBAR START -->
+     <nav class="Navbar">
+        <div class="logo"><i class="fa-solid fa-shop"></i> My Store</div>
+        <button class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+</button>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#product-Featured">Products</a></li>
+            <li>
+                <select class="category-menu" id="category-seach">
+                    <option value="">Categories</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="fragrances">Fragrances</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="groceries">Groceries</option>
+                </select>
+            </li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#" id="loginLink">Login</a></li>
+            <li>
+    <a href="#cart-section" id="cart-link">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart <span id="cartCount">0</span>
+    </a>
+</li>
+        </ul>
+     </nav>
+     <!-- NAVBAR CLOSE -->
+
+     <!-- HERO SECTION START -->
+      <section class="hero">
+        <!-- SLIDE 1 -->
+        <div class="slide active">
+            <div class="hero-content">
+            <h1>New Fashion Collection</h1>
+            <p>
+                Discover the latest styles at great prices.
+            </p>
+            <button>
+                Shop Now
+            </button>
+                </div>
+        </div>
+        <!-- SLIDE 2 -->
+         <div class="slide">
+            <div class="hero-content">
+                <h1>Latest Electronics</h1>
+                <p>Upgrade your technology.</p>
+                <button>Explore Now</button>
+            </div>
+         </div>
+         <!-- SLIDE 3 -->
+          <div class="slide">
+            <div class="hero-content">
+                <h1>Step Into Style</h1>
+                <p>Find your perfect oair today</p>
+                <button>Shop Shoes</button>
+            </div>
+          </div>
+          <button class="prev"><</button>
+          <button class="next">></button>
+          <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+        </div>
+
+      </section>
+      <!-- feature Section -->
+       <section class="features">
+        <div class="feature">
+            <i class="fa-solid fa-truck"></i>
+            <h3>Free Delivery</h3>
+            <p>Free delivery on order above ₹499</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-unlock-keyhole"></i>
+            <h3>Secure Payment</h3>
+            <p>100% secure and safe payment</p>
+        </div>
+        <div class="feature">
+            <i class="fa-regular fa-circle-left"></i>
+            <h3>Easy Returns</h3>
+            <p>Easy returns within 7 days</p>
+        </div>
+        <div class="feature">
+                <i class="fa-solid fa-headset"></i>
+            <h3>24/7 Service</h3>
+            <p>We are here to help you anytime</p>
+        </div>
+       </section>
+       <!-- Category -->
+       <section class="category">
+        <h2>Shop By Category</h2>
+        <div class="category-container">
+            <div class="category-card">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <h3>Beauty</h3>
+                  <p>Explore beauty product</p>
+            </div>
+            <div class="category-card">
+                 <i class="fa-solid fa-spray-can-sparkles"></i>
+                 <h3>Fragrances</h3>
+                 <p>Discover amazing Fragrances</p>
+            </div>
+            <div class="category-card">
+                  <i class="fa-solid fa-couch"></i>
+                  <h3>Furniture</h3>
+                  <p>Upgrade your home</p>
+            </div>
+            <div class="category-card">
+                   <i class="fa-solid fa-basket-shopping"></i>
+            <h3>Groceries</h3>
+            <p>Fresh everyday essentials</p>
+                  </div>
+        </div>
+
+       </section>
+       <section class="products-container" id="product-Featured">
+        <h2>Featured Products</h2>
+        <div class="search1category">
+            <div class="search"><input type="search" name="" id="search" placeholder="Search Products...."><button class="submit">Search</button></div>
+            <div class="category-search">
+                <select class="category-search" id="category-search">
+                    <option value="">All Categories</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="fragrances">Fragrances</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="groceries">Groceries</option>
+                </select>
+            </div>
+        </div>
+        <!-- products API  -->
+        <div id="products"></div>
+       </section>
+
+       <!-- cart display side -->
+<section id="cart-section">
+    <button id="close-cart">✕</button>
+    <h2>My Cart</h2>
+    <div id="cart-products"></div>
+    <p class="message"></p>
+    <div id="cart-total">
+        <div>
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">₹0</strong>
+        </div>
+        <div>
+            <span>Delivery</span>
+            <strong>Free</strong>
+        </div>
+        <hr>
+        <div class="total-row">
+            <span>Total</span>
+            <strong id="cartTotal">₹0</strong>
+        </div>
+        <button id="checkoutBtn">Proceed To Checkout</button>
+
+    </div>
+
+
+</section>
+        <!-- section About -->
+         <section class="about" id="about">
+            <h2>About My Store</h2>
+            <div class="full-about">
+            <div class="about-intro">
+                <h3>Why Choose My Store?</h3>
+            
+                <p><i class="fa-solid fa-check"></i>Quality Products</p>
+                <p><i class="fa-solid fa-check"></i>Affordable Price</p>
+                <p><i class="fa-solid fa-check"></i>Secure Shopping</p>
+                <p><i class="fa-solid fa-check"></i>Fast Delivery</p>
+                <button class="explore-Btn">Explore Products</button>
+            </div>
+            <div class="about-img">
+            </div>
+            </div>
+         </section>
+        <section class="contact-us" id="contact">
+            <h2>Contact Us </h2>
+            <div class="all-details">
+                <div class="left-details">
+                    <h4>Get Into Touch</h4>
+                    <p>
+                        <i class="fa-solid fa-location-dot location-icon"></i>
+                        <strong>Address</strong>
+                    </p>
+                    <span>Chandigarh, India</span>
+                    <p>
+                    <i class="fa-solid fa-phone-volume phone-icon"></i>
+                    <strong>Phone</strong>
+                    </p>
+                    <span>+91 98XXXXXXXX</span>
+                    <p>
+                       <i class="fa-solid fa-envelope email-icon"></i>
+                       <strong>Email</strong> 
+                    </p>
+                    <span>supportMystore.com</span>
+                    <p>
+                        <i class="fa-solid fa-business-time business-icon"></i>
+                        <strong>Business Hours</strong>
+                    </p>
+                    <span>Mon-Sat: 9:00 AM - 7:00 PM  </span>
+                </div>
+                <div class="right-form">
+                    <h4>Send Us a Message</h4>
+                    <div class="full-form">
+                    <form id="contactForm">
+
+    <label for="name">Name</label>
+
+    <input
+        type="text"
+        placeholder="Enter your name.."
+        id="name"
+        required
+    >
+
+    <label for="email">Email</label>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        required
+    >
+
+    <label for="message">Message</label>
+
+    <textarea
+        id="Message"
+        placeholder="Write your message"
+        required
+    ></textarea>
+
+    <button type="submit" id="contactSubmitBtn">Send Message</button>
+
+    <p id="contactMessage"></p>
+
+</form>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- newsletter -->
+        <section class="newsletter"> 
+    <h2>Stay Updated</h2> 
+
+    <p>Get the latest products, offers and update</p> 
+
+    <div class="newsletter-form"> 
+        <input 
+            type="email" 
+            id="newsletterEmail" 
+            placeholder="Enter your email"
+        >
+
+        <button id="subscribeBtn">
+            Subscribe
+        </button>
+    </div> 
+</section>
+       <!-- footer -->
+       <footer class="footer">
+        <div class="all-detailsFooter">
+            <div class="mystore">
+                <h3>My Store</h3>
+                <p><i class="fa-solid fa-bag-shopping shop"></i> Good products. Great value.</p>
+                <p><i class="fa-solid fa-shield-halved secure"></i> Your trusted shopping destination.</p>
+                <p><i class="fa-solid fa-wand-magic-sparkles spark"></i>Better choices, better shopping.</p>
+                <i class="fa-brands fa-instagram instagram-icon" ></i><i class="fa-brands fa-facebook facebook-icon" ></i><i class="fa-brands fa-twitter twitter-icon" ></i><i class="fa-brands fa-youtube youtube-icon" ></i>
+            </div>
+            <div class="quickLink">
+                <h3>Quick Link</h3>
+                <a href="#"><i class="fa-solid fa-house home"></i> Home</a>
+                <a href="#products"><i class="fa-brands fa-product-hunt product"></i> Products</a>
+                <a href="#category"> <i class="fa-solid fa-layer-group category"></i> Categories</a>
+                <a href="#about"><i class="fa-solid fa-circle-info about"></i>About Us</a>
+                <a href="#contact"><i class="fa-solid fa-address-card contact"></i> Contact Us</a>
+            </div>
+            <div class="customer">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-truck-fast shipping"></i>  Shipping Information</p>
+                <p> <i class="fa-solid fa-circle-left return"></i> Returns & Refunds</p>
+                <p><i class="fa-solid fa-lock privacy"></i> Privacy Policy</p>
+                <p><i class="fa-solid fa-file-contract terms"></i> Terms & Conditions</p>
+            </div>
+            <div class="contact">
+                <h3>Contact Information</h3>
+                <p>
+                    <i class="fa-solid fa-location-dot location-icon"></i>
+                    Chandigarh, India
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone-volume phone-icon"></i> +91 98XXXXXXXX
+                </p>
+                <p>
+                    <i class="fa-solid fa-envelope email-icon"></i>
+                    supportMystore@.com
+                </p>
+                <p>
+                        <i class="fa-solid fa-business-time business-icon"></i> Mon-Sat: 9:00 AM - 7:00 PM
+
+
+                </p>
+            </div>
+
+        </div>
+        <div class="copyright"><p>&copy; 2026 My Store — All Rights Reserved.</p></div>
+       </footer>
+     
+    <script src="main.js"></script>
+</body>
+</html>
