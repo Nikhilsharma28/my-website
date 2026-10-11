@@ -1,5 +1,7 @@
 # My Store – E-commerce Website
+## 🌐 Live Demo
 
+[Visit My Store](https://nikhilsharma28.github.io/my-website/)
 A responsive e-commerce website built using HTML, CSS, and JavaScript. The website fetches product data from an API and displays products in a user-friendly layout.
 
 ## Features
